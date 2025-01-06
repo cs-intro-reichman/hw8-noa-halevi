@@ -310,8 +310,8 @@ public class TestHandler {
         } catch (Exception e) {
             actual = TesterMessagesEnum.ERROR + e.getMessage();
         }
-        return this.tester.test("Alice, getting started = false, try to add Followee Foo and foo", expected, actual);
-    }
+        return this.tester.test("Alice, getting started = false, try to add Followee Foo and foo", expected, actual);
+    }
 
     // Improved removeFollowee Tests
     public void mainRemoveFolloweeTest() {
