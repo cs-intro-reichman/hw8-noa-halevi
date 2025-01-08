@@ -131,9 +131,7 @@ public class Network {
         String ans = "Network:";
         for (int i = 0; i < users.length; i++) {
             if (users[i] != null) {
-                if (i > 0) {
-                    ans += "\n"; 
-                }
+                ans += "\n"; 
                 String userName = users[i].getName();
                 ans += userName + " -> ";
                 if (users[i].getfCount() > 0) {
@@ -143,6 +141,7 @@ public class Network {
                             ans += " "; 
                         }
                     }
+                    ans += " "; 
                 }
             }
         }
