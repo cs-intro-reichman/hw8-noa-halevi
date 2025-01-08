@@ -128,21 +128,21 @@ public class Network {
 
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
-        String ans = "Network:";
-        boolean first = true; // Flag to handle the first user
-        for (int i = 0; i < users.length; i++) {
-            if (users[i] != null) {
-                if (!first) {
-                    ans += "\n"; // Add newline before all users except the first one
-                }
-                first = false; // After the first user, set this flag to false
-                String userName = users[i].getName();
-                ans += userName + " -> ";
-                for (int j = 0; j < users[i].getfCount(); j++) {
-                    ans = ans + users[i].getfFollows()[j] + " ";
-                }
+        String ans = "Network:"; 
+    boolean first = true; 
+    for (int i = 0; i < users.length; i++) {
+        if (users[i] != null) {
+            if (!first) {
+                ans += "\n"; 
+            }
+            first = false; 
+            String userName = users[i].getName();
+            ans += "\n" + userName + " -> "; 
+            for (int j = 0; j < users[i].getfCount(); j++) {
+                ans += users[i].getfFollows()[j] + " "; 
             }
         }
-        return ans;
+    }
+    return ans;
     }
 }
