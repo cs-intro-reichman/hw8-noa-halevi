@@ -128,22 +128,24 @@ public class Network {
 
     // Returns a textual description of all the users in this network, and who they follow.
     public String toString() {
-    StringBuilder ans = new StringBuilder("Network:");
-    for (int i = 0; i < users.length; i++) {
-        if (users[i] != null) {
-            ans.append("\n"); 
-            String userName = users[i].getName();
-            ans.append(userName).append(" -> ");
-            if (users[i].getfCount() > 0) {
-                for (int j = 0; j < users[i].getfCount(); j++) {
-                    ans.append(users[i].getfFollows()[j]);
-                    if (j < users[i].getfCount() - 1) {
-                        ans.append(" "); 
+        String ans = "Network:";
+        for (int i = 0; i < users.length; i++) {
+            if (users[i] != null) {
+                if (i > 0) {
+                    ans += "\n"; 
+                }
+                String userName = users[i].getName();
+                ans += userName + " -> ";
+                if (users[i].getfCount() > 0) {
+                    for (int j = 0; j < users[i].getfCount(); j++) {
+                        ans += users[i].getfFollows()[j];
+                        if (j < users[i].getfCount() - 1) {
+                            ans += " "; 
+                        }
                     }
                 }
             }
         }
+        return ans;
     }
-    return ans.toString();
-    }  
 }
