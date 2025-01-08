@@ -136,11 +136,11 @@ public class Network {
                 for (int j = 0; j < users[i].getfCount(); j++) {
                     ans = ans + users[i].getfFollows()[j] + " ";
                 }
-                if (i != users.length - 1) {
+                if (i != users.length - 1 && users[i + 1] != null) {
                     ans += "\n";
                 }
             }
         }
         return ans;
-    }
+        }
 }
