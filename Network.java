@@ -140,12 +140,14 @@ public class Network {
                 ans += userName + " -> "; 
                 if (users[i].getfCount() > 0) {
                     for (int j = 0; j < users[i].getfCount(); j++) {
-                        ans += users[i].getfFollows()[j] + " "; 
+                        ans += users[i].getfFollows()[j];
+                        if (j < users[i].getfCount() - 1) {
+                            ans += " ";
+                        }
                     }
-                    ans = ans.substring(0, ans.length() - 1);
                 }
             }
         }
-        return ans;
+    return ans;
     }
 }
