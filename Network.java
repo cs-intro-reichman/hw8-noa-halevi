@@ -137,6 +137,7 @@ public class Network {
                     ans = ans + users[i].getfFollows()[j];
                     if (j < users[i].getfCount() - 1) {
                         ans += " ";  
+                    }
                 }
                 ans += "\n";
             }
